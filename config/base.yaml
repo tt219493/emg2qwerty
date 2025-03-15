@@ -1,0 +1,52 @@
+defaults:
+  - user: single_user
+  - transforms:  log_spectrogram_window #log_spectrogram, raw_waveform 
+  - model: att_lstm_tds_subsandwich # tds_tc_ctc, conformer_ctc
+  - optimizer: adam
+  - lr_scheduler: linear_warmup_cosine_annealing
+  - decoder: ctc_greedy
+  - cluster: local
+  - _self_
+
+seed: 1501
+batch_size: 32
+num_workers: 4  # Number of workers for dataloading
+train: True  # Whether to train or only run validation and test
+checkpoint: Null #"/u/home/t/ttthach/c247/emg2qwerty/logs/2025-03-13/15-25-35/job0_user=single_user/checkpoints/epoch=29-step=24030.ckpt"
+monitor_metric: val/CER
+monitor_mode: min
+
+trainer:
+  accelerator: gpu
+  devices: 2
+  num_nodes: 1
+  max_epochs: 30 #150
+  default_root_dir: ${hydra:runtime.output_dir}
+
+callbacks:
+  - _target_: pytorch_lightning.callbacks.LearningRateMonitor
+  - _target_: pytorch_lightning.callbacks.ModelCheckpoint
+    dirpath: ${hydra:runtime.output_dir}/checkpoints
+    monitor: ${monitor_metric}
+    mode: ${monitor_mode}
+    save_last: True
+    verbose: True
+
+dataset:
+  root: ${hydra:runtime.cwd}/data
+
+hydra:
+  run:
+    dir: logs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${hydra.run.dir}
+    subdir: job${hydra.job.num}_${hydra.job.override_dirname}
+  output_subdir: hydra_configs
+  job:
+    name: emg2qwerty
+    config:
+      override_dirname:
+        exclude_keys:
+          - checkpoint
+          - cluster
+          - trainer.accelerator

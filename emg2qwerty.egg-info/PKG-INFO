@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: emg2qwerty
+Version: 0.1.0
+Summary: Baselines for modeling QWERTY typing from surface electromyography.
+Author: Viswanath Sivakumar
+Author-email: viswanath@meta.com
+License-File: LICENSE
