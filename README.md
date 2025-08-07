@@ -1,7 +1,8 @@
 # C147/247 Final Project
 ---
 ### Project by Tommy Thach  
-Edits to ```modules.py```, ```lightning.py``` and trivial edits to ```transforms.py``` and ```data.py``` as well as many additional ```*.yaml``` files  
+Edits to ```modules.py```, ```lightning.py``` and trivial edits to ```transforms.py``` and ```data.py``` as well as many additional ```*.yaml``` files
+
 ```report.pdf``` documents the methodology and changes to the original model 
 
 ---
