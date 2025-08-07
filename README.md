@@ -1,12 +1,11 @@
 # C147/247 Final Project
-### Winter 2025 - _Professor Jonathan Kao_
 ---
 ### Project by Tommy Thach  
 Edits to ```modules.py```, ```lightning.py``` and trivial edits to ```transforms.py``` and ```data.py``` as well as many additional ```*.yaml``` files  
-
-The edits are very messy and unorganized. 
+```report.pdf``` documents the methodology and changes to the original model 
 
 ---
+### Winter 2025 - _Professor Jonathan Kao_
 This course project is built upon the emg2qwerty work from Meta. The first section of this README provides some guidance for working with the repo and contains a running list of FAQs. **Note that the rest of the README is from the original repo and we encourage you to take a look at their work.**
 
 ## Guiding Tips + FAQs
