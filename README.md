@@ -1,9 +1,11 @@
-# C147/247 Final Project
----
+# EC ENGR C147/247 Final Project @ UCLA
+Expanding on Meta's baseline model for translating EMG signals to text
+
 ### Project by Tommy Thach  
 Edits to ```modules.py```, ```lightning.py``` and trivial edits to ```transforms.py``` and ```data.py``` as well as many additional ```*.yaml``` files
 
-```report.pdf``` documents the methodology and changes to the original model 
+```report.pdf``` documents the methodology and changes to the original model. \
+Main highlights include the inclusion of an attention mechanism alongside the original CNN architecture.
 
 ---
 ### Winter 2025 - _Professor Jonathan Kao_
