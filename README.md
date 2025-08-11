@@ -7,7 +7,7 @@ Edits to ```modules.py```, ```lightning.py``` and trivial edits to ```transforms
 ```report.pdf``` documents the methodology and changes to the original model. \
 Main highlights include the inclusion of an attention mechanism alongside the original CNN architecture.
 
-Project Repo: https://github.com/joe-lin-tech/emg2qwerty
+Project Repo: https://github.com/joe-lin-tech/emg2qwerty \
 Meta Repo: https://github.com/facebookresearch/emg2qwerty
 
 ---
